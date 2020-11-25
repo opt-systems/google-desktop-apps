@@ -1,0 +1,24 @@
+{
+  "name": "google-desktop-apps",
+  "version": "1.0.0",
+  "description": "Google Desktop Apps",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tasks-light": "node src/tasks/build.js",
+    "build:tasks-dark": "node src/tasks/build-dark.js",
+    "build:tasks": "yarn build:tasks-light && yarn build:tasks-dark",
+    "build:keep": "node src/keep/build.js",
+    "build:all": "yarn build:tasks-light && yarn build:tasks-dark && yarn build:keep",
+    "build": "yarn build:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opt-systems/google-desktop-apps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://opt.si/google-desktop-apps",
+  "devDependencies": {
+    "nativefier": "^11.0.2"
+  }
+}
