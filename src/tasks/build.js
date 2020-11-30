@@ -14,7 +14,10 @@ var opt = {
     icon: path.join(__dirname, 'icon.png'),
     tray: false,
     fastQuit: true,
-    userAgent: 'auto'
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; rv:83.0) Gecko/20100101 Firefox/83.0',
+    internalUrls: '.*?\.google\.*?',
+    electronVersion: '10.1.6',
+    //clearCache: true,
 };
 
 nativefier(opt, function (error, appPath) {

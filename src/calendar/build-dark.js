@@ -3,12 +3,12 @@ const fs = require('fs');
 const path = require('path');
 
 var opt = {
-    name: 'Tasks Dark',
-    targetUrl: 'https://tasks.google.com/embed/?origin=https://calendar.google.com&fullWidth=1',
+    name: 'Calendar Dark',
+    targetUrl: 'https://calendar.google.com',
     version: '1.0.0',
     out: './dist',
     overwrite: true,
-    width: 720,
+    width: 1200,
     height: 900,
     icon: path.join(__dirname, 'icon.png'),
     inject: [path.join(__dirname, 'script.js')],
@@ -26,7 +26,7 @@ nativefier(opt, function (error, appPath) {
         return;
     }
 
-    fs.copyFile(path.join(__dirname, '../common/darkreader.js'), './dist/Tasks Dark-darwin-x64/Tasks Dark.app/Contents/Resources/app/inject/darkreader.js', (err) => {
+    fs.copyFile(path.join(__dirname, '../common/darkreader.js'), './dist/Calendar Dark-darwin-x64/Calendar Dark.app/Contents/Resources/app/inject/darkreader.js', (err) => {
         if (err) throw err;
         console.log('darkreader.js copied');
     });

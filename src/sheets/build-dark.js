@@ -3,12 +3,12 @@ const fs = require('fs');
 const path = require('path');
 
 var opt = {
-    name: 'Tasks Dark',
-    targetUrl: 'https://tasks.google.com/embed/?origin=https://calendar.google.com&fullWidth=1',
+    name: 'Sheets Dark',
+    targetUrl: 'https://docs.google.com/spreadsheets',
     version: '1.0.0',
     out: './dist',
     overwrite: true,
-    width: 720,
+    width: 1200,
     height: 900,
     icon: path.join(__dirname, 'icon.png'),
     inject: [path.join(__dirname, 'script.js')],
@@ -26,10 +26,15 @@ nativefier(opt, function (error, appPath) {
         return;
     }
 
-    fs.copyFile(path.join(__dirname, '../common/darkreader.js'), './dist/Tasks Dark-darwin-x64/Tasks Dark.app/Contents/Resources/app/inject/darkreader.js', (err) => {
+    fs.copyFile(path.join(__dirname, '../common/darkreader.js'), './dist/Sheets Dark-darwin-x64/Sheets Dark.app/Contents/Resources/app/inject/darkreader.js', (err) => {
         if (err) throw err;
         console.log('darkreader.js copied');
     });
 
-    console.log(opt.name + ' has been nativefied to', appPath);
+    // NOTE: siteloading dark reader
+    // fs.copyFile(path.join(__dirname, '../common/jquery.min.js'), './dist/Sheets Dark-darwin-x64/Sheets Dark.app/Contents/Resources/app/inject/jquery.min.js', (err) => {
+    //     if (err) throw err;
+    //     console.log('jquery.min.js copied');
+    // });
+    // console.log(opt.name + ' has been nativefied to', appPath);
 });
