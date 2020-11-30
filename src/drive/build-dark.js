@@ -4,7 +4,7 @@ const path = require('path');
 
 var opt = {
     name: 'Drive Dark',
-    targetUrl: 'https://drive.google.com',
+    targetUrl: 'https://drive.google.com/drive',
     version: '1.0.0',
     out: './dist',
     overwrite: true,

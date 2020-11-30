@@ -6,6 +6,14 @@
 
 - Google Keep
 - Google Tasks
+- Google Docs
+- Google Sheets
+- Google Slides
+- Google Forms
+- Google Drive
+- Google Photos
+- Google Calendar
+- Google Gmail
 
 2. How to use:
 
@@ -35,7 +43,6 @@ You can also build specific apps using scripts from `package.json` file e.g.
 4. Dark mode:
 
 Current apps support dark mode:
-- Tasks: use Tasks Dark application
-- Keep: After login set dark mode in settings (Settings -> Enable dark theme)
+- Dark mode is provided via awesome [Dark Reader](https://github.com/darkreader/darkreader) chrome extenstion/js lib
 
 4. DISCLAIMER: These Apps are not official google desktop apps, they are just google's web apps wrapped by Electron.
